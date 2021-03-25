@@ -1,45 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- necolas's normalize.css (https://github.com/necolas/normalize.css/)  plus basic setup like .clearfix, .sr-only, and box-sizing: border-box -->
-    <link rel="stylesheet" href="./styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- google fonts link -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Lato&display=swap" rel="stylesheet"> 
+  <!-- main css file -->
+  <link rel="stylesheet" href="./styles/styles.css">
 
-    <!-- main css file -->
-    <link rel="stylesheet" href="./styles/styles.css">
+  <!-- font awesome JS link -->
+  <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  
+  <!-- using AOS library by Michał Sajnóg: https://michalsnik.github.io/aos/--> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- font awesome JS link -->
-    <script src="https://kit.fontawesome.com/fd6e98527a.js" crossorigin="anonymous"></script>
-    <title></title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+
+  <title></title>
 </head>
+
 <body>
-    <header>
-        <div class="wrapper">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <header id="home">
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="theme">
+      </div>
+    </nav>
 
-            <div class="">
-                <h1></h1>
-            </div>
-        </div>
-    </header>
-    <main>
-        
-    </main>
+    <div class="wrapper title">
+      <span class="social">
+        <i class="fab fa-github"></i>
+        <i class="fab fa-medium-m"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </span>
+      <h1><b></b><span>Saleh Jaffal</span></h1>
+      <p>Front-End Developer with a background in the Electrical Engineering & Business Management education, with experience in the construction industry.</p>
+    </div>
 
-    <p class="juno">Copyright &#169; 2021 Juno </p>
-    <script src="app.js"></script>
+  </header>
+  <main class="wrapper">
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>Hello, I'm Saleh</p>
+      <p> The combination of my management skills and attention to detail aids me in creating efficient and accessible websites in order to provide a delightful user experience.</p>
+    </section>
+    <section class="skills" id="skills" >
+      <h2>Skill Set</h2>
+      <ul>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-html5-plain"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"></a></i>
+          <p>html</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-css3-plain"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"></a></i>
+          <p>css</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-javascript-plain"><a href="https://developer.mozilla.org/en-US/docs/Web/javascript"></a></i>
+          <p>javascript</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-react-original"><a href="https://reactjs.org/"></a></i>
+          <p>react</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-sass-original"></i>
+          <p>sass</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-github-original"></i>
+          <p>github</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-git-plain"></i>
+          <p>git</p>
+        </li>
+        <li data-aos="fade-up" data-aos-duration="1000">
+          <i class="devicon-firebase-plain"></i>
+          <p>firebase</p>
+        </li>
+      </ul>
+    </section>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <p>Hello, I'm Saleh</p>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>Hello, I'm Saleh</p>
+    </section>
+  </main>
+  <footer>
+    <p class="sal">Saleh Jaffal</p>
+  </footer>
+  <script src="app.js"></script>
 </body>
+
 </html>

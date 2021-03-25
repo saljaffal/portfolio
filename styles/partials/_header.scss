@@ -1,6 +1,128 @@
 // document-wide styles
-.wrapper {
-    max-width: 1500px;
-    width: 80%;
-    margin: 0 auto;
+
+header {
+  // height: 100vh;  
+  position: relative; 
+  height: 100vh;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    .menu {
+      padding: 0;
+      margin: 0;
+      width: 94%;
+      display: flex;
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      font-family: $title;
+      color: $dark-text;
+    }
+  
   }
+}
+
+
+.theme {
+  padding: 0.7rem;
+  position: fixed;
+  background-color: $dark-main;
+  color: $light-main;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  align-self: flex-start;
+  margin: 1rem;
+  z-index: 3;
+}
+
+.theme:hover {
+  opacity: 0.5;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 90vh;
+  position: relative;
+  h1, p {
+    position: relative;
+    color: $dark-text;
+    text-align: left;
+    width: 50%;
+  }
+
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 2rem;
+    & > * {
+      margin: 5px 0;
+      color: $dark-text;
+      font-size: 1.2rem;
+     
+    }
+    .fa-github:hover,
+    .fa-github:focus {
+      color: $github;
+    }
+    .fa-medium-m:hover,
+    .fa-medium-m:focus {
+      color: $medium;
+    }
+    .fa-twitter:hover,
+    .fa-twitter:focus {
+      color: $twitter;
+    }
+    .fa-linkedin-in:hover,
+    .fa-linkedin-in:focus {
+      color: $linkedin;
+    }
+  }
+}
+
+header::before {
+  content: "";
+  background-image: url('../assets/mike-yukhtenko-zuueig1w8WI-unsplash.jpg'), url('../assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -3;
+  opacity: 0.4;
+}
+
+
+.dark{
+  .title {
+    h1, p{
+      color: $light-text;  
+    }
+  }
+  .theme {
+    background-color: $light-main;
+    color: $dark-main;
+  }
+  header::before {
+    background-image: url('../assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg');
+    filter: grayscale(40%);
+    opacity: 1;
+  }
+  .social {
+    & > * {
+      color: $light-text;
+    }
+  }
+}

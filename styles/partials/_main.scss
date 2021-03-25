@@ -1,0 +1,69 @@
+.skills {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin: 20px 5%;
+    list-style: none;
+    width: 80%;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    i {
+      font-size: 5rem;
+    }
+    p {
+      position: relative;
+      text-transform: uppercase;
+      opacity: 0;
+      top: 10px;
+      transition: 0.5s;
+    }
+  }
+  li:hover,
+  li:focus {
+    .devicon-html5-plain {
+      color: #f16529;
+    }
+    .devicon-css3-plain {
+      color: #2965f1;
+    }
+    .devicon-javascript-plain {
+      color: #f7df1e;
+    }
+    .devicon-react-original {
+      color: #61DBFB;
+    }
+    .devicon-sass-original {
+      color: #CD6799;
+    }
+    .devicon-github-original {
+      color: $github;
+    }
+    .devicon-git-plain {
+      color: #F1502F;
+    }
+    .devicon-firebase-plain {
+      color: #FFA611;
+    }
+    p {
+      opacity: 1;
+      top: 0;
+    }
+  }
+}
+
+.dark {
+  background-color: $dark-main;
+
+  .skills {
+    li {
+      color: $light-text;
+    }
+  }
+}
