@@ -1,0 +1,28 @@
+.projects {
+  
+  width: 80%;
+  margin: 0 auto;
+  .project1,
+  .project2 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: 200px;
+      filter: grayscale(100%);
+      border: 7px solid grey;
+      transition: 0.1s;
+    }
+    img:hover{
+      filter: grayscale(0);
+      border: 5px solid grey;
+    }
+    div {
+      width: 60%;
+    }
+  }
+  .project2 {
+    flex-direction: row-reverse;
+  }
+}

@@ -22,7 +22,7 @@ header {
     }
   
   }
-}
+
 
 
 .theme {
@@ -90,7 +90,8 @@ header {
   }
 }
 
-header::before {
+
+&::before {
   content: "";
   background-image: url('../assets/mike-yukhtenko-zuueig1w8WI-unsplash.jpg'), url('../assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg');
   background-size: cover;
@@ -104,25 +105,23 @@ header::before {
   opacity: 0.4;
 }
 
-
+}
 .dark{
-  .title {
+  header{
     h1, p{
       color: $light-text;  
     }
-  }
-  .theme {
-    background-color: $light-main;
-    color: $dark-main;
+    .theme {
+      background-color: $light-main;
+      color: $dark-main;
+    }
+    .social > *{
+      color: $light-text;
+    }
   }
   header::before {
     background-image: url('../assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg');
     filter: grayscale(40%);
     opacity: 1;
-  }
-  .social {
-    & > * {
-      color: $light-text;
-    }
   }
 }

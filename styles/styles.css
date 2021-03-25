@@ -322,7 +322,7 @@ header nav a {
   color: #353535;
 }
 
-.theme {
+header .theme {
   padding: 0.7rem;
   position: fixed;
   background-color: #535966;
@@ -340,11 +340,11 @@ header nav a {
   z-index: 3;
 }
 
-.theme:hover {
+header .theme:hover {
   opacity: 0.5;
 }
 
-.title {
+header .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,14 +362,14 @@ header nav a {
   position: relative;
 }
 
-.title h1, .title p {
+header .title h1, header .title p {
   position: relative;
   color: #353535;
   text-align: left;
   width: 50%;
 }
 
-.title .social {
+header .title .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,29 +381,29 @@ header nav a {
   left: 2rem;
 }
 
-.title .social > * {
+header .title .social > * {
   margin: 5px 0;
   color: #353535;
   font-size: 1.2rem;
 }
 
-.title .social .fa-github:hover,
-.title .social .fa-github:focus {
+header .title .social .fa-github:hover,
+header .title .social .fa-github:focus {
   color: #6e5494;
 }
 
-.title .social .fa-medium-m:hover,
-.title .social .fa-medium-m:focus {
+header .title .social .fa-medium-m:hover,
+header .title .social .fa-medium-m:focus {
   color: #000;
 }
 
-.title .social .fa-twitter:hover,
-.title .social .fa-twitter:focus {
+header .title .social .fa-twitter:hover,
+header .title .social .fa-twitter:focus {
   color: #55acee;
 }
 
-.title .social .fa-linkedin-in:hover,
-.title .social .fa-linkedin-in:focus {
+header .title .social .fa-linkedin-in:hover,
+header .title .social .fa-linkedin-in:focus {
   color: #0077B5;
 }
 
@@ -421,13 +421,17 @@ header::before {
   opacity: 0.4;
 }
 
-.dark .title h1, .dark .title p {
+.dark header h1, .dark header p {
   color: #E2D6CC;
 }
 
-.dark .theme {
+.dark header .theme {
   background-color: #E3C5AB;
   color: #535966;
+}
+
+.dark header .social > * {
+  color: #E2D6CC;
 }
 
 .dark header::before {
@@ -435,10 +439,6 @@ header::before {
   -webkit-filter: grayscale(40%);
           filter: grayscale(40%);
   opacity: 1;
-}
-
-.dark .social > * {
-  color: #E2D6CC;
 }
 
 .skills ul {
@@ -449,9 +449,10 @@ header::before {
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   gap: 20px;
-  margin: 20px 5%;
+  margin: 0 auto;
   list-style: none;
   width: 80%;
+  padding: 0;
 }
 
 .skills li {
@@ -501,7 +502,7 @@ header::before {
 
 .skills li:hover .devicon-react-original,
 .skills li:focus .devicon-react-original {
-  color: #61DBFB;
+  color: #16caf7;
 }
 
 .skills li:hover .devicon-sass-original,
@@ -536,5 +537,53 @@ header::before {
 
 .dark .skills li {
   color: #E2D6CC;
+}
+
+.projects {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.projects .project1,
+.projects .project2 {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project1 img,
+.projects .project2 img {
+  height: 200px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border: 7px solid grey;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.projects .project1 img:hover,
+.projects .project2 img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  border: 5px solid grey;
+}
+
+.projects .project1 div,
+.projects .project2 div {
+  width: 60%;
+}
+
+.projects .project2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 /*# sourceMappingURL=styles.css.map */
