@@ -12,11 +12,9 @@
       height: 200px;
       filter: grayscale(100%);
       border: 7px solid grey;
-      transition: 0.1s;
     }
     img:hover{
       filter: grayscale(0);
-      border: 5px solid grey;
     }
     div {
       width: 60%;
@@ -24,5 +22,17 @@
   }
   .project2 {
     flex-direction: row-reverse;
+  }
+
+  a {
+    text-decoration: none;
+    width: 20px;
+    height: 5px;
+    background-color: $light-text;
+    color: $dark-text;
+    border: 2px solid $dark-main;
+    border-radius: 10%;
+    padding: 0 10px;
+    margin: 0 5px;
   }
 }

@@ -6,7 +6,7 @@ header {
   height: 100vh;
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 10vh;
     .menu {
       padding: 0;
@@ -14,16 +14,23 @@ header {
       width: 94%;
       display: flex;
       list-style: none;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+    li {
+      padding: 0 10px;
     }
     a {
       text-decoration: none;
       font-family: $title;
       color: $dark-text;
     }
+    a:hover {
+      color: $dark-main;
+    }
   
   }
-
-
 
 .theme {
   padding: 0.7rem;
@@ -45,6 +52,7 @@ header {
   opacity: 0.5;
 }
 
+
 .title {
   display: flex;
   flex-direction: column;
@@ -56,7 +64,7 @@ header {
     position: relative;
     color: $dark-text;
     text-align: left;
-    width: 50%;
+    width: 70%;
   }
 
 
@@ -64,13 +72,18 @@ header {
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: 2rem;
-    & > * {
+    left: 1rem;
+    list-style: none;
+    padding: 0;
+    li {
       margin: 5px 0;
       color: $dark-text;
       font-size: 1.2rem;
-     
     }
+    .fab {
+      color: $dark-text;
+    }
+
     .fa-github:hover,
     .fa-github:focus {
       color: $github;
@@ -87,6 +100,7 @@ header {
     .fa-linkedin-in:focus {
       color: $linkedin;
     }
+
   }
 }
 
@@ -108,20 +122,24 @@ header {
 }
 .dark{
   header{
-    h1, p{
+    h1, p, a{
       color: $light-text;  
     }
+    a:hover {
+      color: $light-main;
+    }
+    .social .fab {
+      color: $light-text;
+    }
+  
     .theme {
       background-color: $light-main;
       color: $dark-main;
     }
-    .social > *{
-      color: $light-text;
+    &::before {
+      background-image: url('../assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg');
+      filter: grayscale(40%);
+      opacity: 1;
     }
-  }
-  header::before {
-    background-image: url('../assets/mike-yukhtenko-a2kD4b0KK4s-unsplash.jpg');
-    filter: grayscale(40%);
-    opacity: 1;
   }
 }

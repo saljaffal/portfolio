@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Poppins&display=swap');
 
 
-$light-main: #E3C5AB;
+$light-main: #C69E7B;
 $dark-main: #535966;
 $dark-text: #353535;
 $light-text: #E2D6CC;
@@ -18,18 +18,47 @@ $title: 'Hind Siliguri', sans-serif;
 $body: 'Poppins', sans-serif;
 
 body {
+  color: $dark-text;
   font-family: $title;
   background-color: $light-main;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
 }
 
 p {
   font-family: $body;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .wrapper {
   max-width: 1300px;
   width: 80%;
   margin: 0 auto;
+}
+
+.dark{
+  color: $light-text;
+  background-color: $dark-main;
+}
+
+section {
+  padding: 50px 0;
+}
+
+footer p {
+  text-align: center;
 }
 
 * {

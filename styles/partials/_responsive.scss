@@ -15,15 +15,39 @@ $desktop-min: 1200px;
 // source: https://ricostacruz.com/til/css-media-query-breakpoints
 
 
+@media screen and (max-width: $desktop-min) {
+  .projects {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: $tablet-max) {
-  
+  .projects {
+    .project1,
+    .project2 {
+      flex-direction: column;
+    }
+  }
+
 }
 
 @media screen and (max-width: $mobile-max) {
-
+  header {
+    .title {
+      h1, p {
+      width: 100%;
+      }
+    }
+  }
+  .about {
+    flex-direction: column;
+    p {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 @media screen and (max-width: $mobile-min) {
 
-  
+ 
 }

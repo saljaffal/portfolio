@@ -1,0 +1,22 @@
+.scrollToTopBtn {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background-color: black;
+  color: $light-main;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
